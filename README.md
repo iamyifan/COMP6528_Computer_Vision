@@ -1,4 +1,4 @@
-# COMP6528 CV
+# COMP6528 Computer Vision
 
 ## Reference
 - [Course Outline](https://programsandcourses.anu.edu.au/2024/course/COMP6528#terms)
