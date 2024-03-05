@@ -1,0 +1,11 @@
+imageio
+matplotlib
+numpy
+opencv_python
+jupyterlab
+Pillow
+requests
+scikit_image
+scikit_learn
+scipy
+tqdm
