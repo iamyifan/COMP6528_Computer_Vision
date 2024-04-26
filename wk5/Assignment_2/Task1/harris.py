@@ -59,11 +59,16 @@ def fspecial(shape=(3, 3), sigma=0.5):
 
 # Parameters, add more if needed
 sigma = 2  # parameter for the Gaussian filter in fspecial
-img_path = 'Task1/Harris-2.jpg'
+img_path = '/Users/yifan/Documents/ANU/24S1/COMP6528_Computer_Vision/wk5/Assignment_2/Task1/Harris-1.jpg'
+# img_path = '/Users/yifan/Documents/ANU/24S1/COMP6528_Computer_Vision/wk5/Assignment_2/Task1/Harris-2.jpg'
+# img_path = '/Users/yifan/Documents/ANU/24S1/COMP6528_Computer_Vision/wk5/Assignment_2/Task1/Harris-3.jpg'
+# img_path = '/Users/yifan/Documents/ANU/24S1/COMP6528_Computer_Vision/wk5/Assignment_2/Task1/Harris-4.jpg'
+# img_path = '/Users/yifan/Documents/ANU/24S1/COMP6528_Computer_Vision/wk5/Assignment_2/Task1/Harris-5.jpg'
+# img_path = '/Users/yifan/Documents/ANU/24S1/COMP6528_Computer_Vision/wk5/Assignment_2/Task1/Harris-6.jpg'
 window_size_M = 3  # window size for the calculation of M
 window_size_R = 3  # neighbourhood size for local maxima of R
 k = 0.05         # empirically determined constant ranged from 0.04 to 0,06
-thresh = 1e-8    # threshold in thresholding process on R
+thresh = 1e-2    # threshold in thresholding process on R
 
 # Derivative masks
 dx = np.array([[-1, 0, 1], [-1, 0, 1], [-1, 0, 1]])  # vertical Sobel filter
@@ -145,18 +150,6 @@ def thresh_non_max_sup(R, thresh, window_size):
     Returns:
         (numpy.ndarray, numpy.ndarray): Return the index after thresholding and non-max suppression.
     """
-    # R_t = np.copy(R)
-    # R_t[R_t < thresh] = 0
-    
-    # R_nm = np.zero_like(R)
-    # pad_width = (window_size - 1) // 2
-    # R_t_p = np.pad(R_t, pad_width, mode='minimum')
-    # for r in range(R_nm.shape[0]):
-    #     for c in range(R_nm.shape[1]):
-    #         local_max = R_t_p[r:r + 2 * pad_width + 1, c:c + 2 * pad_width + 1].max()
-    #         if R_t[r, c] == local_max:
-    #             R_t[r, c] = 1
-    
     # thresholding: select index where the cornerness is larger than threshold
     thresh_idx_x, thresh_idx_y = np.where(R > thresh)
     thresh_idx = np.array([(x, y) for (x, y) in zip(thresh_idx_x, thresh_idx_y)])
@@ -179,12 +172,15 @@ corner_thresh, corner_thresh_non_max = thresh_non_max_sup(R, thresh*R.max(), win
 R_cv = cv2.cornerHarris(bw, blockSize=window_size_M, ksize=3, k=k)
 corner_thresh_cv, corner_thresh_non_max_cv = thresh_non_max_sup(R_cv, thresh*R_cv.max(), window_size_R)
 
+# print("self-implemented cornerness:\n", corner_thresh_non_max)
+# print("built-in cornerness:\n", corner_thresh_non_max_cv)
+
 
 def plot_R(img_path, R, corner_thresh, corner_thresh_non_max):
     # results comparison between:
     img = plt.imread(img_path)
     fig, ax = plt.subplots(1, 4, figsize=(8, 4))
-    fig.suptitle(img_path.split('/')[1] + '\n' + 
+    fig.suptitle(img_path.split('/')[-1] + '\n' + 
                 "threshold:" + str(thresh) + " k:" + str(k))
     # 1. original image
     ax[0].imshow(img, cmap='gray' if np.ndim(img) == 2 else 'viridis')
@@ -301,6 +297,5 @@ for i, theta in enumerate([0, 90, 180, 270]):
     ax[1, i].imshow(rotate_img, cmap='gray' if np.ndim(rotate_img) == 2 else 'viridis')
     ax[1, i].scatter(corner_thresh_non_max[:, 1], corner_thresh_non_max[:, 0], color='green', s=0.8, marker='o')
     ax[1, i].axis('off')
-fig.suptitle(img_path.split('/')[1])
+fig.suptitle(img_path.split('/')[-1])
 plt.show()
-

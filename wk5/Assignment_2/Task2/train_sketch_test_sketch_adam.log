@@ -1,0 +1,60 @@
+--------------- epoch 1 ---------------
+train loss: 2.881908,  acc: 0.093750  [   32 /  1956]
+train loss: 2.096875,  acc: 0.281250  [ 1632 /  1956]
+avg train loss: 2.386876,  avg train acc: 0.146169
+test loss: 1.990108, acc: 0.281250    [   32 /   841]
+avg test loss: 2.023229,  avg test acc: 0.272762
+--------------- epoch 2 ---------------
+train loss: 1.736438,  acc: 0.437500  [   32 /  1956]
+train loss: 1.674345,  acc: 0.468750  [ 1632 /  1956]
+avg train loss: 1.605360,  avg train acc: 0.500504
+test loss: 1.479192, acc: 0.531250    [   32 /   841]
+avg test loss: 1.506412,  avg test acc: 0.537423
+--------------- epoch 3 ---------------
+train loss: 1.052559,  acc: 0.781250  [   32 /  1956]
+train loss: 0.874703,  acc: 0.875000  [ 1632 /  1956]
+avg train loss: 1.147929,  avg train acc: 0.710685
+test loss: 1.103680, acc: 0.718750    [   32 /   841]
+avg test loss: 1.255661,  avg test acc: 0.623071
+--------------- epoch 4 ---------------
+train loss: 1.038865,  acc: 0.750000  [   32 /  1956]
+train loss: 0.863470,  acc: 0.750000  [ 1632 /  1956]
+avg train loss: 0.862021,  avg train acc: 0.795363
+test loss: 1.109128, acc: 0.656250    [   32 /   841]
+avg test loss: 1.109885,  avg test acc: 0.664095
+--------------- epoch 5 ---------------
+train loss: 0.565994,  acc: 0.937500  [   32 /  1956]
+train loss: 0.822179,  acc: 0.812500  [ 1632 /  1956]
+avg train loss: 0.682960,  avg train acc: 0.851310
+test loss: 0.952450, acc: 0.687500    [   32 /   841]
+avg test loss: 1.007266,  avg test acc: 0.698945
+--------------- epoch 6 ---------------
+train loss: 0.552729,  acc: 0.937500  [   32 /  1956]
+train loss: 0.394553,  acc: 0.937500  [ 1632 /  1956]
+avg train loss: 0.517859,  avg train acc: 0.905746
+test loss: 0.901584, acc: 0.750000    [   32 /   841]
+avg test loss: 0.983391,  avg test acc: 0.709748
+--------------- epoch 7 ---------------
+train loss: 0.369188,  acc: 0.968750  [   32 /  1956]
+train loss: 0.608825,  acc: 0.875000  [ 1632 /  1956]
+avg train loss: 0.399281,  avg train acc: 0.941028
+test loss: 0.849512, acc: 0.718750    [   32 /   841]
+avg test loss: 0.915566,  avg test acc: 0.723380
+--------------- epoch 8 ---------------
+train loss: 0.312272,  acc: 0.937500  [   32 /  1956]
+train loss: 0.360067,  acc: 0.937500  [ 1632 /  1956]
+avg train loss: 0.304067,  avg train acc: 0.965222
+test loss: 0.942800, acc: 0.718750    [   32 /   841]
+avg test loss: 0.922469,  avg test acc: 0.711034
+--------------- epoch 9 ---------------
+train loss: 0.391032,  acc: 0.937500  [   32 /  1956]
+train loss: 0.174687,  acc: 0.968750  [ 1632 /  1956]
+avg train loss: 0.244901,  avg train acc: 0.975302
+test loss: 1.019020, acc: 0.718750    [   32 /   841]
+avg test loss: 0.902607,  avg test acc: 0.721451
+--------------- epoch 10 ---------------
+train loss: 0.198781,  acc: 1.000000  [   32 /  1956]
+train loss: 0.250986,  acc: 0.937500  [ 1632 /  1956]
+avg train loss: 0.200077,  avg train acc: 0.973790
+test loss: 1.058808, acc: 0.687500    [   32 /   841]
+avg test loss: 0.888597,  avg test acc: 0.720293
